@@ -1,14 +1,24 @@
+/* Body background and layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #7fd0e6;
+    min-height: 100vh;
+}
+
+/* Navbar styles */
 .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 20px;
+            padding: 5px 10px;
             background: #fff;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         .navbar h1 {
             margin: 0;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
             letter-spacing: 1px;
             color: #222;
@@ -53,3 +63,129 @@
         .nav-right .login-btn:hover {
             background: #f5f5f5;
         }
+
+/* Main content layout */
+.left-div, .right-div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.left-div {
+    width: 54%;
+    padding: 60px 0 0 7%;
+    color: #fff;
+}
+
+.left-div h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    line-height: 1.1;
+}
+
+.left-div p {
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+    font-weight: 400;
+}
+
+.left-div h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+/* Register form card */
+.right-div {
+    width: 34%;
+    margin: 40px 4% 0 0;
+    background: #5fc3e0;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    padding: 38px 36px 32px 36px;
+    color: #fff;
+}
+
+.right-div h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.right-div p {
+    font-size: 1rem;
+    margin-bottom: 28px;
+    color: #fff;
+}
+
+.right-div form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.right-div input[type="email"],
+.right-div input[type="password"] {
+    padding: 14px 18px;
+    border: 2px solid #fff;
+    border-radius: 28px;
+    background: transparent;
+    color: #fff;
+    font-size: 1.1rem;
+    outline: none;
+    margin-bottom: 0;
+    transition: border 0.2s;
+}
+
+.right-div input[type="email"]:focus,
+.right-div input[type="password"]:focus {
+    border-color: #ff8686;
+    background: #eafaff;
+    color: #222;
+}
+
+.right-div button[type="submit"] {
+    margin-top: 10px;
+    padding: 16px 0;
+    background: #ff8686;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    letter-spacing: 1px;
+}
+
+.right-div button[type="submit"]:hover {
+    background: #ff5c5c;
+}
+
+/* Main content flexbox */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .left-div, .right-div {
+        display: block;
+        width: 90%;
+        margin: 0 auto 24px auto;
+        padding: 24px 0 0 0;
+    }
+    .right-div {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
